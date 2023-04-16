@@ -50,12 +50,16 @@ body {
 
 header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  gap: 8px;
   padding: 30px 50px;
   width: 100%;
 }
+
 header img {
-  width: 220px;
+  width: 250px;
 }
 
 nav {
@@ -100,7 +104,7 @@ nav a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 60px;
+  font-size: clamp(60px, 60px, 10vw);
   font-family: var(--Fraunces);
 }
 
@@ -110,4 +114,80 @@ nav a {
   width: 50px;
 }
 
+#container-2 {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  width: 50%;
+  height: 650px;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  padding: 120px;
+}
+
+.box a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--Fraunces);
+  color: rgb(70, 69, 69);
+  letter-spacing: 5px;
+  transition: 0.3s;
+  width: fit-content;
+  box-shadow: 0px 10px var(--Soft_red);
+}
+
+.image1 {
+  background-image: url(images/desktop/image-transform.jpg);
+}
+
+.image2 {
+  background-image: url(images/desktop/image-stand-out.jpg);
+}
+
+.textbox1 h1,
+.textbox2 h1 {
+  font-family: var(--Fraunces);
+  font-size: 4em;
+}
+
+.textbox1 p,
+.textbox2 p {
+  font-family: var(--Barlow);
+  color: rgba(0, 0, 0, 0.664);
+  font-size: 1.3em;
+}
+
+.second-box {
+  background-image: url(images/desktop/image-graphic-design.jpg);
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+color: var(--Dark_cyan);
+}
+
+.third-box {
+  background-image: url(images/desktop/image-photography.jpg);
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+color: var(--Dark_blue);
+}
+
+.third-box h2,
+.second-box h2 {
+  font-family: var(--Fraunces);
+  font-size: 2em;
+}
+
+.third-box p,
+.second-box p {
+  font-family: var(--Barlow);
+  font-size: 1.2em;
+}

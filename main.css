@@ -27,6 +27,7 @@ body {
 }
 
 * {
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -198,8 +199,9 @@ nav a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  min-height: 500px;
+  text-align: center;
+  padding: 40px;
+  min-height: 100vh;
   gap: 140px;
 }
 
@@ -258,4 +260,100 @@ nav a {
 .people-name h5 {
   font-family: var(--Barlow);
   color: rgb(141, 141, 141);
+}
+
+#container-4 {
+  gap: 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "bf1 bf2 bf3 bf4";
+}
+
+#container-4 img {
+  width: 100%;
+  height: 100%;
+}
+
+.bf1 {
+  grid-area: bf1;
+}
+
+.bf2 {
+  grid-area: bf2;
+}
+
+.bf3 {
+  grid-area: bf3;
+}
+
+.bf4 {
+  grid-area: bf4;
+}
+
+.before-footer {
+  min-width: 400px;
+}
+
+footer {
+  background-color: hsl(168, 45%, 65%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 25px;
+  padding: 50px;
+  min-height: 400px;
+  font-family: var(--Barlow);
+  position: relative;
+}
+
+footer > * {
+  -webkit-user-drag: none;
+}
+
+footer > img {
+  width: 260px;
+}
+
+#arrowup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  fill: var(--Dark_moderate_cyan);
+}
+
+#links {
+  display: flex;
+  gap: 40px;
+  font-size: 18px;
+}
+
+#links a {
+  text-decoration: none;
+  color: var(--Dark_moderate_cyan);
+}
+
+#links a:hover {
+  color: white;
+}
+
+#social-icons {
+  display: flex;
+  gap: 40px;
+}
+
+#social-icons img {
+  width: 25px;
+}
+
+@media screen and (max-width: 1024px) {
+  #container-4 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "bf1 bf2"
+      "bf3 bf4";
+  }
 }

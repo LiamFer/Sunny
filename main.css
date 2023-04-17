@@ -75,6 +75,7 @@ header img {
   align-items: center;
   justify-content: center;
   gap: 40px;
+  z-index: 9;
 }
 
 #navbar a {

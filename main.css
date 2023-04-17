@@ -65,14 +65,19 @@ header img {
   width: 250px;
 }
 
-nav {
+#open,
+#close {
+  display: none;
+}
+
+#navbar {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
 }
 
-nav a {
+#navbar a {
   text-decoration: none;
 }
 
@@ -349,6 +354,37 @@ footer > img {
 }
 
 @media screen and (max-width: 1024px) {
+  #close,
+  #open img {
+    width: 50px;
+  }
+
+  #close,
+  #open {
+    display: block;
+  }
+
+  #navbar {
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    z-index: -99;
+    background-color: var(--Yellow);
+    padding: 20px;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.192);
+    transition: 0.3s;
+    font-size: 18px;
+  }
+
+  .nav-links {
+    color: black;
+  }
+
   #container-4 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);

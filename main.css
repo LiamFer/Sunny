@@ -37,12 +37,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 40px;
   font-family: var(--Barlow);
   background-image: url(images/desktop/image-header.jpg);
   background-size: cover;
   background-position: center;
-  min-height: 900px;
+  min-height: 400px;
   height: 100vh;
   text-align: center;
   overflow: hidden;
@@ -52,6 +53,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: auto;
   align-items: center;
   gap: 8px;
   padding: 30px 50px;
@@ -103,21 +105,11 @@ nav a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: absolute;
   align-items: center;
   font-size: 40px;
   font-family: var(--Fraunces);
   text-transform: uppercase;
-}
-
-#arrow-box h1 {
-  position: absolute;
-  top: 20%;
-}
-
-#arrow-box img {
-  position: absolute;
-  top: 45%;
-  width: 50px;
 }
 
 #container-2 {

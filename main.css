@@ -104,8 +104,14 @@ nav a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: clamp(60px, 60px, 10vw);
+  font-size: 40px;
   font-family: var(--Fraunces);
+  text-transform: uppercase;
+}
+
+#arrow-box h1 {
+  position: absolute;
+  top: 20%;
 }
 
 #arrow-box img {
@@ -169,7 +175,7 @@ nav a {
   justify-content: flex-end;
   align-items: center;
   text-align: center;
-color: var(--Dark_cyan);
+  color: var(--Dark_cyan);
 }
 
 .third-box {
@@ -177,7 +183,7 @@ color: var(--Dark_cyan);
   justify-content: flex-end;
   align-items: center;
   text-align: center;
-color: var(--Dark_blue);
+  color: var(--Dark_blue);
 }
 
 .third-box h2,

@@ -355,10 +355,6 @@ footer > img {
 }
 
 @media screen and (max-width: 1024px) {
-  * {
-    min-width: none;
-  }
-
   #close,
   #open img {
     width: 50px;
@@ -396,5 +392,78 @@ footer > img {
     grid-template-areas:
       "bf1 bf2"
       "bf3 bf4";
+  }
+}
+
+@media screen and (max-width: 380px) {
+
+
+  header {
+    padding: 40px 20px 40px 20px;
+  }
+  header img {
+    width: 150px;
+  }
+
+  #arrow-box {
+    gap: 0.5em;
+    font-size: 1.7em;
+  }
+
+  .before-footer,
+  .people-card,
+  .box {
+    min-width: 0px;
+  }
+
+  #container-2 {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .textbox1 h1,
+  .textbox2 h1 {
+    font-size: 2em;
+  }
+
+  .textbox1 p,
+  .textbox2 p {
+    font-size: 16px;
+  }
+
+  .box {
+    padding: 16px;
+    width: 100%;
+    height: 400px;
+  }
+
+  .third-box h2,
+  .second-box h2 {
+    font-size: 1.5em;
+  }
+
+  .third-box p,
+  .second-box p {
+    font-size: 16px;
+  }
+
+  #container-3 {
+    gap: 40px;
+  }
+
+  #container-3 h3 {
+    font-size: 1.4em;
+  }
+
+  .people-card {
+    width: 100%;
+  }
+
+  .people-card > p {
+    font-size: 16px;
+  }
+
+  .people-name p {
+    font-size: 18px;
   }
 }

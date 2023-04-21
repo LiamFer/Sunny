@@ -1,32 +1,10 @@
-var open = document.getElementById("open");
-var close = document.getElementById("close");
-var menu = document.getElementById("navbar");
+var menu = document.getElementById("burguer");
+var header = document.getElementById("container-1");
+var items = document.getElementById("menu-items");
 
-open.addEventListener("click", abrir);
-close.addEventListener("click", closing);
+menu.addEventListener("click", menuOpen);
 
-function abrir() {
-  if (menu.style.width == "0%") {
-    menu.style.width = "100%";
-  }
-  menu.style.zIndex = "9";
+function menuOpen() {
+  header.classList.toggle("header-still");
+  items.classList.toggle("menu-opn");
 }
-
-function closing() {
-  menu.style.width = "0%";
-  menu.style.zIndex = "-99";
-}
-
-// Primeiro Código
-
-// function abrir() {
-//   if (document.getElementById("navbar").style.width == "0%") {
-//     document.getElementById("navbar").style.width = "100%";
-//   }
-//   document.getElementById("navbar").style.zIndex = "9";
-// }
-
-// function closing() {
-//   document.getElementById("navbar").style.width = "0%";
-//   document.getElementById("navbar").style.zIndex = "-9";
-// }

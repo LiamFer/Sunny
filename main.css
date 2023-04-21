@@ -367,21 +367,20 @@ footer > img {
 }
 
 @media screen and (max-width: 750px) {
-
   #container-1.header-still {
     position: sticky;
     top: 0px;
   }
 
- #burguer {
+  #burguer {
     display: inline-block;
     width: 70px;
     padding: 10px;
-cursor: pointer;
+    cursor: pointer;
   }
 
   #menu-items {
-    transition: 0.5s ease-in-out;
+    transition: all .5s ease-in-out;
     overflow-y: hidden;
     display: flex;
     background-color: #3dbeff;
@@ -394,6 +393,7 @@ cursor: pointer;
     flex-direction: column;
     justify-content: flex-start;
     gap: 40px;
+    border-bottom: 2px solid white;
   }
 
   #menu-items.menu-opn {
@@ -430,7 +430,7 @@ cursor: pointer;
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 430px) {
   header {
     padding: 40px 20px 40px 20px;
   }

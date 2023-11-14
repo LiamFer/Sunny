@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny</title>
+    <style>
+        @charset "UTF-8";
+
+        @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+        :root {
+            --Soft_red: hsl(7, 99%, 70%);
+            --Yellow: hsl(51, 100%, 49%);
+            --Dark_cyan: hsl(167, 40%, 24%);
+            --Dark_blue: hsl(198, 62%, 26%);
+            --Dark_moderate_cyan: hsl(168, 34%, 41%);
+            --Barlow: "Barlow", sans-serif;
+            --Fraunces: "Fraunces", serif;
+        }
+
+        ::-webkit-scrollbar {
+            background-color: #3ebfff93;
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: orange;
+            border-radius: 20px;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        * {
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #container-1 {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            font-family: var(--Barlow);
+            background-image: url(images/desktop/image-header.jpg);
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: auto;
+            align-items: center;
+            gap: 8px;
+            padding: 30px 50px;
+            width: 100%;
+        }
+
+        header img {
+            width: 250px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        #burguer {
+            display: none;
+        }
+
+        #menu-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links {
+            color: white;
+            text-decoration: underline 2px transparent;
+            text-underline-offset: 10px;
+            transition: 0.4s;
+        }
+
+        .nav-links:hover {
+            text-decoration: underline 2px white;
+        }
+
+        #contact-button {
+            font-family: var(--Fraunces);
+            text-transform: uppercase;
+            color: black;
+            background-color: white;
+            border-radius: 20px;
+            padding: 15px 20px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        #contact-button:hover {
+            background-color: rgba(255, 255, 255, 0.39);
+            color: white;
+        }
+
+        #arrow-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            align-items: center;
+            gap: 1.2em;
+            font-size: 40px;
+            font-family: var(--Fraunces);
+            text-transform: uppercase;
+        }
+
+        #container-2 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+            width: 50%;
+            height: 650px;
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+            padding: 120px;
+            min-width: 509px;
+            flex-grow: 1;
+        }
+
+        .box a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: var(--Fraunces);
+            color: rgb(70, 69, 69);
+            letter-spacing: 5px;
+            transition: 0.3s;
+            width: fit-content;
+            box-shadow: 0px -0px var(--Yellow);
+        }
+
+        .box a::before {
+            content: "";
+            display: inline-block;
+            background-color: hsla(51, 100%, 49%, 0.350);
+            width: 100%;
+            height: 40%;
+            border-radius: 20px;
+            margin-bottom: -30px;
+            transition: 1s;
+        }
+
+        .box a:hover::before {
+            background-color: hsla(51, 100%, 49%)
+        }
+
+        .box.textbox2 a::before {
+            background-color: hsl(7, 99%, 70%, 0.350);
+        }
+
+        .box.textbox2 a:hover::before {
+            background-color: hsl(7, 99%, 70%);
+        }
+
+        .image1 {
+            background-image: url(images/desktop/image-transform.jpg);
+        }
+
+        .image2 {
+            background-image: url(images/desktop/image-stand-out.jpg);
+        }
+
+        .textbox1 h1,
+        .textbox2 h1 {
+            font-family: var(--Fraunces);
+            font-size: 4em;
+        }
+
+        .textbox1 p,
+        .textbox2 p {
+            font-family: var(--Barlow);
+            color: rgba(0, 0, 0, 0.664);
+            font-size: 1.3em;
+        }
+
+        .second-box {
+            background-image: url(images/desktop/image-graphic-design.jpg);
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            color: var(--Dark_cyan);
+        }
+
+        .third-box {
+            background-image: url(images/desktop/image-photography.jpg);
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            color: var(--Dark_blue);
+        }
+
+        .third-box h2,
+        .second-box h2 {
+            font-family: var(--Fraunces);
+            font-size: 2em;
+        }
+
+        .third-box p,
+        .second-box p {
+            font-family: var(--Barlow);
+            font-size: 1.2em;
+        }
+
+        #container-3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            min-height: 100vh;
+            gap: 140px;
+        }
+
+        #container-3 h3 {
+            font-family: var(--Fraunces);
+            text-transform: uppercase;
+            font-size: 2em;
+            letter-spacing: 10px;
+            color: rgb(53, 53, 53);
+        }
+
+        #people {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 40px;
+            text-align: center;
+        }
+
+        .people-card {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 380px;
+            min-width: 380px;
+            gap: 25px;
+        }
+
+        .people-card img {
+            width: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .people-card>p {
+            font-family: var(--Barlow);
+            color: rgb(53, 53, 53);
+            font-size: 18px;
+        }
+
+        .people-name {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .people-name p {
+            font-family: var(--Fraunces);
+            color: black;
+            font-size: 1.2em;
+        }
+
+        .people-name h5 {
+            font-family: var(--Barlow);
+            color: rgb(141, 141, 141);
+        }
+
+        #container-4 {
+            gap: 0px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+            grid-template-areas: "bf1 bf2 bf3 bf4";
+        }
+
+        #container-4 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .bf1 {
+            grid-area: bf1;
+        }
+
+        .bf2 {
+            grid-area: bf2;
+        }
+
+        .bf3 {
+            grid-area: bf3;
+        }
+
+        .bf4 {
+            grid-area: bf4;
+        }
+
+        .before-footer {
+            min-width: 400px;
+        }
+
+        footer {
+            background-color: hsl(168, 45%, 65%);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            gap: 25px;
+            padding: 50px;
+            min-height: 400px;
+            font-family: var(--Barlow);
+            position: relative;
+        }
+
+        footer>* {
+            -webkit-user-drag: none;
+        }
+
+        footer>img {
+            width: 260px;
+        }
+
+        #arrowup {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            fill: var(--Dark_moderate_cyan);
+        }
+
+        #links {
+            display: flex;
+            gap: 40px;
+            font-size: 18px;
+        }
+
+        #links a {
+            text-decoration: none;
+            color: var(--Dark_moderate_cyan);
+        }
+
+        #links a:hover {
+            color: white;
+        }
+
+        #social-icons {
+            display: flex;
+            gap: 40px;
+        }
+
+        #social-icons img {
+            width: 25px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            #container-4 {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-areas:
+                    "bf1 bf2"
+                    "bf3 bf4";
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+            #container-1.header-still {
+                position: sticky;
+                top: 0px;
+            }
+
+            #burguer {
+                display: inline-block;
+                width: 70px;
+                padding: 10px;
+                cursor: pointer;
+            }
+
+            #menu-items {
+                transition: all 0.5s ease-in-out;
+                overflow-y: hidden;
+                display: flex;
+                background-color: #3dbeff;
+                z-index: -9;
+                top: 117px;
+                left: 0px;
+                width: 100%;
+                height: 0vh;
+                position: absolute;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 40px;
+                border-bottom: 2px solid white;
+            }
+
+            #menu-items.menu-opn {
+                height: 100vh;
+                z-index: 999;
+            }
+
+            .nav-links {
+                font-size: 20px;
+                color: white;
+                text-decoration: underline 2px transparent;
+                text-underline-offset: 10px;
+                transition: 0.4s;
+            }
+
+            .nav-links:hover {
+                text-decoration: underline 2px white;
+            }
+
+            #contact-button {
+                font-family: var(--Fraunces);
+                text-transform: uppercase;
+                color: black;
+                background-color: white;
+                border-radius: 20px;
+                padding: 15px 20px;
+                transition: 0.3s;
+                text-decoration: none;
+            }
+
+            #contact-button:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+
+        @media screen and (max-width: 430px) {
+            header {
+                padding: 40px 20px 40px 20px;
+            }
+
+            header img {
+                width: 180px;
+            }
+
+            #burguer {
+                display: inline-block;
+                width: 60px;
+                padding: 10px;
+            }
+
+            #arrow-box {
+                gap: 0.5em;
+                font-size: 1.7em;
+            }
+
+            .before-footer,
+            .people-card,
+            .box {
+                min-width: 0px;
+            }
+
+            #container-2 {
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+
+            .textbox1 h1,
+            .textbox2 h1 {
+                font-size: 2em;
+            }
+
+            .textbox1 p,
+            .textbox2 p {
+                font-size: 16px;
+            }
+
+            .box {
+                padding: 16px;
+                width: 100%;
+                height: 400px;
+            }
+
+            .third-box h2,
+            .second-box h2 {
+                font-size: 1.5em;
+            }
+
+            .third-box p,
+            .second-box p {
+                font-size: 16px;
+            }
+
+            #container-3 {
+                gap: 40px;
+            }
+
+            #container-3 h3 {
+                font-size: 1.4em;
+            }
+
+            .people-card {
+                width: 100%;
+            }
+
+            .people-card>p {
+                font-size: 16px;
+            }
+
+            .people-name p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <section id="container-1">
+
+            <header>
+                <img src="images/logo.svg" alt="Sunnyside">
+
+                <nav id="navbar">
+                    <img id="burguer" src="images/icon-hamburger.svg" alt="Menu">
+
+                    <div id="menu-items">
+                        <a href="#" class="nav-links">About</a>
+                        <a href="#" class="nav-links"> Services</a>
+                        <a href="#" class="nav-links"> Projects</a>
+                        <a href="#" id="contact-button"> Contact</a>
+                    </div>
+
+                </nav>
+
+            </header>
+
+            <div id="arrow-box">
+                <h1>We are creatives</h1>
+                <img src="images/icon-arrow-down.svg" alt="">
+            </div>
+        </section>
+
+        <section id="container-2">
+
+            <div class="box textbox1">
+                <h1>Transform your brand</h1>
+                <p>
+                    We are a full-service creative agency specializing in helping brands grow fast.
+                    Engage your clients through compelling visuals that do most of the marketing for you.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <div class="box image1">
+            </div>
+
+            <div class="box image2">
+            </div>
+
+            <div class="box textbox2">
+                <h1>Stand out to the right audience</h1>
+                <p>
+                    Using a collaborative formula of designers, researchers, photographers, videographers, and
+                    copywriters, we’ll
+                    build
+                    and extend your brand in digital places.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <div class="box second-box">
+                <h2>Graphic design</h2>
+                <p>
+                    Great design makes you memorable. We deliver artwork that underscores your brand message and
+                    captures
+                    potential
+                    clients’ attention.
+                </p>
+            </div>
+
+            <div class="box third-box">
+                <h2>Photography</h2>
+                <p>
+                    Increase your credibility by getting the most stunning, high-quality photos that improve your
+                    business image.
+                </p>
+            </div>
+
+        </section>
+
+        <section id="container-3">
+            <h3>Client testimonials</h3>
+
+            <article id="people">
+                <div class="people-card">
+                    <img src="images/image-emily.jpg" alt="Emily Picture">
+                    <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines
+                        were always
+                        hit.</p>
+                    <div class="people-name">
+                        <p>Emily R.</p>
+                        <h5>Marketing Director</h5>
+                    </div>
+                </div>
+                <div class="people-card">
+                    <img src="images/image-thomas.jpg" alt="Thomas Picture">
+                    <p>
+                        Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a
+                        satisfying and
+                        enjoyable
+                        experience.
+                    </p>
+                    <div class="people-name">
+                        <p>Thomas S.</p>
+                        <h5>Chief Operating Officer</h5>
+                    </div>
+                </div>
+                <div class="people-card">
+                    <img src="images/image-jennie.jpg" alt="Jennie Picture">
+                    <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly
+                        recommended!</p>
+                    <div class="people-name">
+                        <p>Jennie F.</p>
+                        <h5>Business Owner</h5>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <section id="container-4">
+
+            <div id="before-footer" class="bf1">
+                <img src="images/desktop/image-gallery-milkbottles.jpg" alt="Milk Bottles">
+            </div>
+
+            <div id="before-footer" class="bf2">
+                <img src="images/desktop/image-gallery-orange.jpg" alt="Orange">
+            </div>
+
+            <div id="before-footer" class="bf3">
+                <img src="images/desktop/image-gallery-cone.jpg" alt="Ice Cream Cone">
+            </div>
+
+            <div id="before-footer" class="bf4">
+                <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="Sugar Cubes">
+            </div>
+
+        </section>
+
+        <footer>
+            <a href="#container-1" id="arrowup">
+                <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="m2.019 11.993c0 5.518 4.48 9.998 9.998 9.998 5.517 0 9.997-4.48 9.997-9.998s-4.48-9.998-9.997-9.998c-5.518 0-9.998 4.48-9.998 9.998zm1.5 0c0-4.69 3.808-8.498 8.498-8.498s8.497 3.808 8.497 8.498-3.807 8.498-8.497 8.498-8.498-3.808-8.498-8.498zm4.715-1.528s1.505-1.502 3.259-3.255c.147-.146.338-.219.53-.219s.384.073.53.219c1.754 1.753 3.259 3.254 3.259 3.254.145.145.217.336.216.527 0 .191-.074.383-.22.53-.293.293-.766.294-1.057.004l-1.978-1.978v6.694c0 .413-.336.75-.75.75s-.75-.337-.75-.75v-6.694l-1.978 1.979c-.29.289-.762.286-1.055-.007-.147-.146-.22-.338-.221-.53-.001-.19.071-.38.215-.524z"
+                        fill-rule="nonzero" />
+                </svg>
+            </a>
+            <img src="images/logo.svg"></img>
+            <div id="links">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Projects</a>
+            </div>
+            <div id="social-icons">
+                <img src="images/icon-facebook.svg" alt="Facebook">
+                <img src="images/icon-instagram.svg" alt="Instagram">
+                <img src="images/icon-twitter.svg" alt="Twitter">
+                <img src="images/icon-pinterest.svg" alt="Pinterest">
+            </div>
+        </footer>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
